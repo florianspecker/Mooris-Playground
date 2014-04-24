@@ -3,6 +3,7 @@
                   android:id="@+id/sticky_scroll"
                   android:layout_height="match_parent"
                   android:layout_width="fill_parent"
+                  android:paddingTop="0dp"
         >
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                   android:orientation="vertical"
@@ -28,8 +29,7 @@
                   android:gravity="center"
                   android:stretchMode="columnWidth"
                   android:numColumns="3"
-                >
-        </GridView>
+                />
 
         <ImageView
                 android:id="@+id/header2"
@@ -43,62 +43,14 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 />
-        <GridLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
-
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-
-                android:useDefaultMargins="false"
-                android:alignmentMode="alignBounds"
-                android:columnOrderPreserved="false"
-
-                android:columnCount="3"
-                >
-            <ImageView
-                    android:id="@+id/imageView2a"
-                    android:src="@drawable/hat"
-                    android:layout_height="100dip"
-                    android:layout_width="100dip"
-                    android:layout_gravity="center"
-                    />
-            <ImageView
-                    android:src="@drawable/shoe"
-                    android:id="@+id/imageView2b"
-                    android:layout_height="100dip"
-                    android:layout_width="100dip"
-                    android:layout_gravity="center"
-                    />
-            <ImageView
-                    android:src="@drawable/table"
-                    android:id="@+id/imageView2c"
-                    android:layout_height="100dip"
-                    android:layout_width="100dip"
-                    android:layout_gravity="center"
-                    />
-            <ImageView
-                    android:id="@+id/imageView2d"
-                    android:src="@drawable/hat"
-                    android:layout_height="100dip"
-                    android:layout_width="100dip"
-                    android:layout_gravity="center"
-                    />
-            <ImageView
-                    android:src="@drawable/shoe"
-                    android:id="@+id/imageView2e"
-                    android:layout_height="100dip"
-                    android:layout_width="100dip"
-                    android:layout_gravity="center"
-                    />
-            <ImageView
-                    android:src="@drawable/table"
-                    android:id="@+id/imageView2f"
-                    android:layout_height="100dip"
-                    android:layout_width="100dip"
-                    android:layout_gravity="center"
-                    />
-
-        </GridLayout>
+        <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:id="@+id/gridview1"
+                  android:layout_width="fill_parent"
+                  android:layout_height="300dip"
+                  android:gravity="center"
+                  android:stretchMode="columnWidth"
+                  android:numColumns="3"
+                />
 
         <ImageView
                 android:id="@+id/header3"
@@ -112,57 +64,14 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 />
-        <GridLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
-
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-
-                android:useDefaultMargins="true"
-                android:alignmentMode="alignBounds"
-                android:columnOrderPreserved="false"
-                android:padding="10dip"
-
-                android:columnCount="3"
-                >
-            <ImageView
-                    android:id="@+id/imageView3a"
-                    android:src="@drawable/hat"
-                    android:layout_height="100dip"
-                    android:layout_width="100dip"
-                    />
-            <ImageView
-                    android:src="@drawable/shoe"
-                    android:id="@+id/imageView3b"
-                    android:layout_height="100dip"
-                    android:layout_width="100dip"
-                    />
-            <ImageView
-                    android:src="@drawable/table"
-                    android:id="@+id/imageView3c"
-                    android:layout_height="100dip"
-                    android:layout_width="100dip"
-                    />
-            <ImageView
-                    android:id="@+id/imageView3d"
-                    android:src="@drawable/hat"
-                    android:layout_height="100dip"
-                    android:layout_width="100dip"
-                    />
-            <ImageView
-                    android:src="@drawable/shoe"
-                    android:id="@+id/imageView3e"
-                    android:layout_height="100dip"
-                    android:layout_width="100dip"
-                    />
-            <ImageView
-                    android:src="@drawable/table"
-                    android:id="@+id/imageView3f"
-                    android:layout_height="100dip"
-                    android:layout_width="100dip"
-                    />
-
-        </GridLayout>
+        <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:id="@+id/gridview2"
+                  android:layout_width="fill_parent"
+                  android:layout_height="300dip"
+                  android:gravity="center"
+                  android:stretchMode="columnWidth"
+                  android:numColumns="3"
+                />
 
     </LinearLayout>
 </com.emilsjolander.components.StickyScrollViewItems.StickyScrollView>

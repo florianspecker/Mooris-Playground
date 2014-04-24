@@ -25,6 +25,7 @@ public class ListActivity extends Activity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.list_layout);
+
         GridView gridview = (GridView) findViewById(R.id.gridview);
         final GridAdapter gridadapter = new GridAdapter(this);
         gridview.setAdapter(gridadapter);
@@ -39,6 +40,38 @@ public class ListActivity extends Activity {
             }
 
         });
+
+        gridview = (GridView) findViewById(R.id.gridview1);
+        final GridAdapter gridadapter1 = new GridAdapter(this);
+        gridview.setAdapter(gridadapter1);
+        gridview.setOnTouchListener(new View.OnTouchListener(){
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_MOVE){
+                    return true;
+                }
+                return false;
+            }
+
+        });
+
+        gridview = (GridView) findViewById(R.id.gridview2);
+        final GridAdapter gridadapter2 = new GridAdapter(this);
+        gridview.setAdapter(gridadapter2);
+        gridview.setOnTouchListener(new View.OnTouchListener(){
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_MOVE){
+                    return true;
+                }
+                return false;
+            }
+
+        });
+
+
     }
 
     @Override
