@@ -1,7 +1,7 @@
 package ch.conceptworks.mooris_playground;
 
 /**
- * TODO
+ * Example using https://github.com/emilsjolander/StickyScrollViewItems
  *
  * @author Florian Specker
  */
