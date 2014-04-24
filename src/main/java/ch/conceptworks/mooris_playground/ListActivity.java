@@ -2,6 +2,7 @@ package ch.conceptworks.mooris_playground;
 
 /**
  * Example using https://github.com/emilsjolander/StickyScrollViewItems
+ * TODO create UI programmatically as described here: http://stackoverflow.com/questions/4979212/programmatically-creating-a-relativelayout-in-android
  *
  * @author Florian Specker
  */
