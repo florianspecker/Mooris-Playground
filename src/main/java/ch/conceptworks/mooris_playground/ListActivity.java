@@ -8,8 +8,11 @@ package ch.conceptworks.mooris_playground;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.MotionEvent;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.GridView;
 import android.widget.TextView;
 
 public class ListActivity extends Activity {
@@ -22,6 +25,20 @@ public class ListActivity extends Activity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.list_layout);
+        GridView gridview = (GridView) findViewById(R.id.gridview);
+        final GridAdapter gridadapter = new GridAdapter(this);
+        gridview.setAdapter(gridadapter);
+        gridview.setOnTouchListener(new View.OnTouchListener(){
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_MOVE){
+                    return true;
+                }
+                return false;
+            }
+
+        });
     }
 
     @Override
