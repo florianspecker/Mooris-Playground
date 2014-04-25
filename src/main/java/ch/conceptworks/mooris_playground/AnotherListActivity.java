@@ -8,7 +8,7 @@ package ch.conceptworks.mooris_playground;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
@@ -65,11 +65,11 @@ public class AnotherListActivity extends Activity {
         gridview.setNumColumns(3);
         final GridAdapter gridadapter = new GridAdapter(this);
         gridview.setAdapter(gridadapter);
-        gridview.setOnTouchListener(new View.OnTouchListener(){
+        gridview.setOnTouchListener(new View.OnTouchListener() {
 
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                if(event.getAction() == MotionEvent.ACTION_MOVE){
+                if (event.getAction() == MotionEvent.ACTION_MOVE) {
                     return true;
                 }
                 return false;
@@ -107,11 +107,11 @@ public class AnotherListActivity extends Activity {
         gridview.setStretchMode(GridView.STRETCH_COLUMN_WIDTH);
         gridview.setNumColumns(3);
         gridview.setAdapter(gridadapter);
-        gridview.setOnTouchListener(new View.OnTouchListener(){
+        gridview.setOnTouchListener(new View.OnTouchListener() {
 
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                if(event.getAction() == MotionEvent.ACTION_MOVE){
+                if (event.getAction() == MotionEvent.ACTION_MOVE) {
                     return true;
                 }
                 return false;
@@ -149,11 +149,11 @@ public class AnotherListActivity extends Activity {
         gridview.setStretchMode(GridView.STRETCH_COLUMN_WIDTH);
         gridview.setNumColumns(3);
         gridview.setAdapter(gridadapter);
-        gridview.setOnTouchListener(new View.OnTouchListener(){
+        gridview.setOnTouchListener(new View.OnTouchListener() {
 
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                if(event.getAction() == MotionEvent.ACTION_MOVE){
+                if (event.getAction() == MotionEvent.ACTION_MOVE) {
                     return true;
                 }
                 return false;
@@ -167,8 +167,40 @@ public class AnotherListActivity extends Activity {
 
         // end store 2
 
+        LinearLayout footerLayout = new LinearLayout(this);
+        footerLayout.setId(400);
+        footerLayout.setGravity(Gravity.CENTER);
+        lp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, 100);
+        lp.addRule(RelativeLayout.BELOW, gridview.getId());
+        relativeLayout.addView(footerLayout, lp);
 
-        scrollView.smoothScrollTo(0,0); // see http://stackoverflow.com/questions/4119441/how-to-scroll-to-top-of-long-scrollview-layout
+        textView = new TextView(this);
+        textView.setId(423);
+        textView.setText("Mooris.ch AG");
+        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 10);
+        textView.setGravity(Gravity.CENTER);
+        LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 100, 1.0f);
+        textView.setLayoutParams(param);
+        footerLayout.addView(textView);
+
+        textView = new TextView(this);
+        textView.setId(424);
+        textView.setText("+41 43 311 02 02");
+        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 10);
+        textView.setGravity(Gravity.CENTER);
+        textView.setLayoutParams(param);
+        footerLayout.addView(textView);
+
+        textView = new TextView(this);
+        textView.setId(425);
+        textView.setText("Einstellungen & AGB");
+        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 10);
+        textView.setGravity(Gravity.CENTER);
+        textView.setLayoutParams(param);
+        footerLayout.addView(textView);
+
+
+        scrollView.smoothScrollTo(0, 0); // see http://stackoverflow.com/questions/4119441/how-to-scroll-to-top-of-long-scrollview-layout
     }
 
 }
