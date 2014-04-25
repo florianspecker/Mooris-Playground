@@ -69,11 +69,12 @@ public class AnotherListActivity extends Activity {
 
         // begin store 0
 
-        ImageView header1 = new ImageView(this);
+        ImageView header1 = new AspectRatioImageView(this);
         header1.setId(121);
         header1.setImageResource(R.drawable.header1);
         header1.setTag("sticky");
-        relativeLayout.addView(header1, new RelativeLayout.LayoutParams(measuredwidth, 80 * measuredwidth / 384));
+        header1.setAdjustViewBounds(true);
+        relativeLayout.addView(header1, new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT));
 
         TextView textView = new TextView(this);
         textView.setId(123);
@@ -110,11 +111,12 @@ public class AnotherListActivity extends Activity {
 
         // begin store 1
 
-        header1 = new ImageView(this);
+        header1 = new AspectRatioImageView(this);
         header1.setId(221);
         header1.setImageResource(R.drawable.header2);
         header1.setTag("sticky");
-        lp = new RelativeLayout.LayoutParams(measuredwidth, 80 * measuredwidth / 384);
+        header1.setAdjustViewBounds(true);
+        lp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
         lp.addRule(RelativeLayout.BELOW, gridview.getId());
         relativeLayout.addView(header1, lp);
 
@@ -152,11 +154,12 @@ public class AnotherListActivity extends Activity {
 
         // begin store 2
 
-        header1 = new ImageView(this);
+        header1 = new AspectRatioImageView(this);
         header1.setId(321);
         header1.setImageResource(R.drawable.header3);
         header1.setTag("sticky");
-        lp = new RelativeLayout.LayoutParams(measuredwidth, 80 * measuredwidth / 384);
+        header1.setAdjustViewBounds(true);
+        lp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
         lp.addRule(RelativeLayout.BELOW, gridview.getId());
         relativeLayout.addView(header1, lp);
 
