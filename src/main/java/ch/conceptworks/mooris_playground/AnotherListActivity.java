@@ -8,8 +8,12 @@ package ch.conceptworks.mooris_playground;
 
 import android.app.Activity;
 import android.graphics.Color;
+import android.graphics.Point;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.TypedValue;
+import android.view.Display;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
@@ -28,6 +32,24 @@ public class AnotherListActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        int measuredwidth = 0;
+        int measuredheight = 0;
+        Point size = new Point();
+        WindowManager w = getWindowManager();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            w.getDefaultDisplay().getSize(size);
+            measuredwidth = size.x;
+            measuredheight = size.y;
+        } else {
+            Display d = w.getDefaultDisplay();
+            measuredwidth = d.getWidth();
+            measuredheight = d.getHeight();
+        }
+        int availablewidth = Math.min(measuredwidth, measuredheight);
+        float density = getResources().getDisplayMetrics().density;
+        Log.i("info", "width: " + measuredwidth + ", height: " + measuredheight + ", availablewidth: " + availablewidth + ", density: " + density);
+
         // remove title
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -51,7 +73,7 @@ public class AnotherListActivity extends Activity {
         header1.setId(121);
         header1.setImageResource(R.drawable.header1);
         header1.setTag("sticky");
-        relativeLayout.addView(header1, new RelativeLayout.LayoutParams(640, 100));
+        relativeLayout.addView(header1, new RelativeLayout.LayoutParams(measuredwidth, 80 * measuredwidth / 384));
 
         TextView textView = new TextView(this);
         textView.setId(123);
@@ -92,7 +114,7 @@ public class AnotherListActivity extends Activity {
         header1.setId(221);
         header1.setImageResource(R.drawable.header2);
         header1.setTag("sticky");
-        lp = new RelativeLayout.LayoutParams(640, 100);
+        lp = new RelativeLayout.LayoutParams(measuredwidth, 80 * measuredwidth / 384);
         lp.addRule(RelativeLayout.BELOW, gridview.getId());
         relativeLayout.addView(header1, lp);
 
@@ -134,7 +156,7 @@ public class AnotherListActivity extends Activity {
         header1.setId(321);
         header1.setImageResource(R.drawable.header3);
         header1.setTag("sticky");
-        lp = new RelativeLayout.LayoutParams(640, 100);
+        lp = new RelativeLayout.LayoutParams(measuredwidth, 80 * measuredwidth / 384);
         lp.addRule(RelativeLayout.BELOW, gridview.getId());
         relativeLayout.addView(header1, lp);
 
