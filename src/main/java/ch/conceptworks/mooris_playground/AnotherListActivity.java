@@ -7,6 +7,7 @@ package ch.conceptworks.mooris_playground;
  */
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -35,6 +36,7 @@ public class AnotherListActivity extends Activity {
         ScrollView scrollView = new com.emilsjolander.components.StickyScrollViewItems.StickyScrollView(this);
         ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         scrollView.setLayoutParams(layoutParams);
+        scrollView.setBackgroundColor(Color.WHITE);
 
         setContentView(scrollView);
 
