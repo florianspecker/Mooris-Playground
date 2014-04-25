@@ -19,6 +19,22 @@ public class GridAdapter extends BaseAdapter {
             R.drawable.hat, R.drawable.shoe, R.drawable.table,
             R.drawable.hat, R.drawable.shoe, R.drawable.table,
             R.drawable.hat, R.drawable.shoe, R.drawable.table,
+            R.drawable.hat, R.drawable.shoe, R.drawable.table,
+            R.drawable.hat, R.drawable.shoe, R.drawable.table,
+            R.drawable.hat, R.drawable.shoe, R.drawable.table,
+            R.drawable.hat, R.drawable.shoe, R.drawable.table,
+            R.drawable.hat, R.drawable.shoe, R.drawable.table,
+            R.drawable.hat, R.drawable.shoe, R.drawable.table,
+            R.drawable.hat, R.drawable.shoe, R.drawable.table,
+            R.drawable.hat, R.drawable.shoe, R.drawable.table,
+            R.drawable.hat, R.drawable.shoe, R.drawable.table,
+            R.drawable.hat, R.drawable.shoe, R.drawable.table,
+            R.drawable.hat, R.drawable.shoe, R.drawable.table,
+            R.drawable.hat, R.drawable.shoe, R.drawable.table,
+            R.drawable.hat, R.drawable.shoe, R.drawable.table,
+            R.drawable.hat, R.drawable.shoe, R.drawable.table,
+            R.drawable.hat, R.drawable.shoe, R.drawable.table,
+            R.drawable.hat, R.drawable.shoe, R.drawable.table,
             R.drawable.hat, R.drawable.shoe, R.drawable.table
     };
 

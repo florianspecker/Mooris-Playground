@@ -8,10 +8,11 @@
 
     <application android:icon="@drawable/ic_launcher" android:allowBackup="false" android:label="@string/app_name">
         <activity
-                android:name=".ListActivity"
+                android:name=".AnotherListActivity"
                 android:label="@string/app_name"
-                android:screenOrientation="portrait"
                 >
+            <!--                 android:screenOrientation="portrait"
+-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
