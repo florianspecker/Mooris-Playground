@@ -90,6 +90,7 @@ public class AnotherListActivity extends Activity {
         gridview.setNumColumns(3);
         final GridAdapter gridadapter = new GridAdapter(this);
         gridview.setAdapter(gridadapter);
+        gridview.setPadding(15,15,15,15);   // 10 * screenDensity (== 10 dip)
         gridview.setOnTouchListener(new View.OnTouchListener() {
 
             @Override
@@ -102,7 +103,7 @@ public class AnotherListActivity extends Activity {
 
         });
 
-        lp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, 900);
+        lp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, 1080);   // 2 * 10 * screenDensity + numRows * imgSize
         lp.addRule(RelativeLayout.BELOW, textView.getId());
         relativeLayout.addView(gridview, lp);
 
@@ -133,6 +134,7 @@ public class AnotherListActivity extends Activity {
         gridview.setStretchMode(GridView.STRETCH_COLUMN_WIDTH);
         gridview.setNumColumns(3);
         gridview.setAdapter(gridadapter);
+        gridview.setPadding(15,15,15,15);   // 10 * screenDensity (== 10 dip)
         gridview.setOnTouchListener(new View.OnTouchListener() {
 
             @Override
@@ -145,7 +147,7 @@ public class AnotherListActivity extends Activity {
 
         });
 
-        lp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, 900);
+        lp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, 1080);   // 2 * 10 * screenDensity + numRows * imgSize
         lp.addRule(RelativeLayout.BELOW, textView.getId());
         relativeLayout.addView(gridview, lp);
 
@@ -176,6 +178,7 @@ public class AnotherListActivity extends Activity {
         gridview.setStretchMode(GridView.STRETCH_COLUMN_WIDTH);
         gridview.setNumColumns(3);
         gridview.setAdapter(gridadapter);
+        gridview.setPadding(15,15,15,15);   // 10 * screenDensity (== 10 dip)
         gridview.setOnTouchListener(new View.OnTouchListener() {
 
             @Override
@@ -188,7 +191,7 @@ public class AnotherListActivity extends Activity {
 
         });
 
-        lp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, 900);
+        lp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, 1080);   // 2 * 10 * screenDensity + numRows * imgSize
         lp.addRule(RelativeLayout.BELOW, textView.getId());
         relativeLayout.addView(gridview, lp);
 

@@ -21,20 +21,6 @@ public class GridAdapter extends BaseAdapter {
             R.drawable.hat, R.drawable.shoe, R.drawable.table,
             R.drawable.hat, R.drawable.shoe, R.drawable.table,
             R.drawable.hat, R.drawable.shoe, R.drawable.table,
-            R.drawable.hat, R.drawable.shoe, R.drawable.table,
-            R.drawable.hat, R.drawable.shoe, R.drawable.table,
-            R.drawable.hat, R.drawable.shoe, R.drawable.table,
-            R.drawable.hat, R.drawable.shoe, R.drawable.table,
-            R.drawable.hat, R.drawable.shoe, R.drawable.table,
-            R.drawable.hat, R.drawable.shoe, R.drawable.table,
-            R.drawable.hat, R.drawable.shoe, R.drawable.table,
-            R.drawable.hat, R.drawable.shoe, R.drawable.table,
-            R.drawable.hat, R.drawable.shoe, R.drawable.table,
-            R.drawable.hat, R.drawable.shoe, R.drawable.table,
-            R.drawable.hat, R.drawable.shoe, R.drawable.table,
-            R.drawable.hat, R.drawable.shoe, R.drawable.table,
-            R.drawable.hat, R.drawable.shoe, R.drawable.table,
-            R.drawable.hat, R.drawable.shoe, R.drawable.table,
             R.drawable.hat, R.drawable.shoe, R.drawable.table
     };
 
@@ -62,9 +48,9 @@ public class GridAdapter extends BaseAdapter {
             // set height to parentWidth / 3
             // need to adjust height of GridView accordingly!! How???
             iview = new ImageView(context);
-            iview.setLayoutParams(new GridView.LayoutParams(100,100));
+            iview.setLayoutParams(new GridView.LayoutParams(150,150));  // (screenWidth - (2 * 10 * screenDensity)) / 3
             iview.setScaleType(ImageView.ScaleType.FIT_CENTER);
-            iview.setPadding(5, 5, 5, 5);
+            iview.setPadding(15,15,15,15);   // 10 * screenDensity (== 10 dip)
         } else {
             iview = (ImageView) view;
         }
